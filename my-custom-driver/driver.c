@@ -1,5 +1,5 @@
 //
-//  main.c
+//  driver.c
 //  my-custom-driver
 //
 //  Created by Jason Hough on 7/13/20.
@@ -8,7 +8,6 @@
 
 #include "driver.h"
 
-int main(int argc, const char * argv[]) {
-    testPrint();
-    return 0;
+void testPrint() {
+    printf("Hi there!\n");
 }
