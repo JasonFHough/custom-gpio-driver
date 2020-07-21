@@ -7,8 +7,22 @@
 //
 
 #include "driver.h"
+#include <unistd.h>
 
 int main(int argc, const char * argv[]) {
-    testPrint();
+    printf("Starting...\n");
+    gpioSetup();
+    int pin = 17;
+    
+    while (1) {
+        setGPIOPin(17);
+        
+        sleep(.5);
+        
+        clrGPIOPin(17);
+        
+        sleep(.5);
+    }
+    
     return 0;
 }
