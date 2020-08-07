@@ -12,7 +12,7 @@
 int main(int argc, const char * argv[]) {
     printf("Starting...\n");
     gpioSetup();
-    int pin = 17;
+    int pin = 17;   // BCM Pin Number
     
     while (1) {
         setGPIOPin(17);
