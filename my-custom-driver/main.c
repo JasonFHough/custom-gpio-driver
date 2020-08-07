@@ -6,10 +6,23 @@
 //  Copyright © 2020 Jason Hough. All rights reserved.
 //
 
-#include <stdio.h>
+#include "driver.h"
+#include <unistd.h>
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    printf("Hello, World!\n");
+    printf("Starting...\n");
+    gpioSetup();
+    int pin = 17;   // BCM Pin Number
+    
+    while (1) {
+        setGPIOPin(17);
+        
+        sleep(.5);
+        
+        clrGPIOPin(17);
+        
+        sleep(.5);
+    }
+    
     return 0;
 }
